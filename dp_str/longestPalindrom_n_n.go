@@ -9,8 +9,8 @@ func longestPalindrome_n_n(s string) string {
 		radi := make([]int, n)
 		i := 0
 		c := 0
-		r := 0
-		j := 0
+		r, j := 0, 0
+
 		if odd {
 			j = 1
 		}
