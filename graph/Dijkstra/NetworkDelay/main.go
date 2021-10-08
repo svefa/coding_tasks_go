@@ -2,6 +2,12 @@ package main
 
 import "fmt"
 
+/*
+* Dijxtra
+* Time complexity:	O(V+ElogV) - using heap
+* Space Complexity:  O(V)
+**/
+
 func networkDelayTime(times [][]int, n int, k int) int {
 	g := make([]map[int]int, n)
 	for i, _ := range g {

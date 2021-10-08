@@ -6,6 +6,7 @@ func minCostToSupplyWater(n int, wells []int, pipes [][]int) int {
 	sort.Slice(pipes, func(i, j int) bool {
 		return pipes[i][2] < pipes[j][2]
 	})
+	// need to opotimize
 	for _, pip := range pipes {
 		union(p, wells, pip[0]-1, pip[1]-1, pip[2])
 	}
