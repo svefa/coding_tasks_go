@@ -1,5 +1,8 @@
 package main
 
+// moving vars into solution helps
+// before: not working when submit, working when run : the same test case
+
 /**
  * The read4 API is already defined for you.
  *
@@ -13,10 +16,10 @@ package main
  * read4(buf4) // read4 returns 3. Now buf = ['i','j','k',...], fp points to end of file
  */
 
-var buf4 []byte
-var j int
-var k int
 var solution = func(read4 func([]byte) int) func([]byte, int) int {
+	var buf4 []byte
+	var j int
+	var k int
 	// implement read below.
 	return func(buf []byte, n int) int {
 		if buf4 == nil {
@@ -41,7 +44,6 @@ var solution = func(read4 func([]byte) int) func([]byte, int) int {
 			}
 			if k < 4 {
 				break
-
 			}
 		}
 		return i
